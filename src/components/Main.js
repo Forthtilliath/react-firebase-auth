@@ -1,5 +1,7 @@
 import React from 'react';
 import firebase from '../utils/firebaseConfig';
+import Create from './Create';
+import Read from './Read';
 
 const Main = () => {
 
@@ -12,7 +14,8 @@ const Main = () => {
                 <h4>Bonjour {firebase.auth().currentUser.displayName}</h4>
                 <div onClick={signOut} style={{cursor:'pointer'}}>Se déconnecter</div>
             </nav>
-            {/* App component */}
+            <Create />
+            <Read />
         </main>
     );
 };
